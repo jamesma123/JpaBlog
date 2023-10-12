@@ -24,23 +24,47 @@
             background-color: #e0e0e0;
             border-radius: 10px;
             overflow: hidden;
+            margin-bottom: 50px; /* Added space between loading bar and screenshots */
         }
 
         .loading-bar {
             height: 100%;
-            width: 0;  /* Start with no progress */
+            width: 0; /* Start with no progress */
             background-color: #1b851b;
-            transition: width 0.5s ease-in-out;  /* Smooth animation for width changes */
+            transition: width 0.5s ease-in-out; /* Smooth animation for width changes */
         }
+
         .blog-link {
             margin-top: 20px;
             font-size: 1.2em;
-}
+        }
+
+        .screenshots-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap; /* Allows the items to wrap onto the next line if the screen is too narrow */
+        }
+
+        .screenshot {
+            margin: 10px; /* Space around screenshots */
+        }
+
+        .screenshot img {
+            width: 50%; /* Make sure the image doesn't overflow its container */
+            max-width: 20 px; /* Limit maximum width of the image */
+            max-height: 20 px;
+            border-radius: 5px; /* Optional: for rounded corners */
+        }
+
+        .screenshot-caption {
+            margin-top: 10px; /* Space between image and caption */
+        }
     </style>
 </head>
 
 <body>
-    <div class="Company Name">
+    <div class="company-name">
         Jackpot Automations App Completion
     </div>
     <div class="loading-bar-container">
@@ -50,6 +74,27 @@
         <a href="Blogpost.html">Read our latest blog article</a>
     </div>
 
+    <!-- Screenshots section -->
+    <div class="screenshots-container">
+        <!-- Screenshot 1 -->
+        <div class="screenshot">
+            <img src="D14ECF0E-B869-4EBB-A103-083421258C7A.jpeg" alt="Screenshot 1">
+            <div class="screenshot-caption">Login Page</div>
+        </div>
+        <!-- Screenshot 2 -->
+        <div class="screenshot">
+            <img src="49CBD9F5-AAF6-4FD2-BF6A-BAF7AC380BE0.jpeg" alt="Screenshot 2">
+            <div class="screenshot-caption">Sign Up Page</div>
+        </div>
+        <!-- Screenshot 3 -->
+        <div class="screenshot">
+            <img src="plaidlink.png" alt="Screenshot 3">
+            <div class="screenshot-caption">Plaid Link connection</div>
+        </div>
+    </div>
+
+   
+
     <script>
         function updateLoadingBar(percentage) {
             const loadingBar = document.querySelector('.loading-bar');
@@ -57,13 +102,8 @@
         }
 
         // Example usage:
-        updateLoadingBar(40);  // This will set the loading bar to 50% completion
+        updateLoadingBar(40); // This will set the loading bar to 40% completion
     </script>
-    
-
-
-
-
 </body>
 
 </html>
