@@ -60,6 +60,20 @@
         .screenshot-caption {
             margin-top: 10px; /* Space between image and caption */
         }
+        .waitlist-widget-container {
+            position: fixed;   /* Fixed position to keep it on the right */
+            top: 50%;          /* Center it vertically */
+            right: 10px;       /* Distance from the right edge of the screen */
+            transform: translateY(-50%); /* Center-align the div vertically */
+            width: 300px;      /* Width of the container */
+            height: auto;      /* Height based on content */
+            background-color: #f0f0f0; /* Background color of the container */
+            border: 1px solid #ddd; /* Border for the container */
+            border-radius: 10px; /* Rounded corners for the container */
+            padding: 15px;     /* Padding inside the container */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Optional: Adds a shadow for better visibility */
+            z-index: 1000;     /* Ensures the widget stays above other elements */
+}
         <link rel="stylesheet" type="text/css" href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"/>
     </style>
 </head>
